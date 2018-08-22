@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			.main{
+				perspective: 1000px;
+				transform-style: preserve-3d;
+				
+			}
+			.mofang{
+				width: 200px;
+				height: 200px;
+				margin: 200px auto;
+				position: relative;
+				transition:all 5s;
+				transform-style: preserve-3d;
+			}
+			
+			.mofang div{
+				width: 200px;
+				height: 200px;	
+				position: absolute;
+				top: 0;
+				left: 0;
+				/*透明度*/
+				opacity:0.7;
+				border: 1px solid #cccc;
+				transition:all 5s;
+			}
+			.qian{
+				background: url(img/8.jpg);
+				background-size: 100% 100%;
+				transform:  translateZ(100px);
+			}
+			.hou{
+				background: url(img/9.jpg);
+				background-size: 100% 100%;
+				transform: rotateY(180deg) translateZ(100px);
+			}
+			.zuo{
+				background: url(img/3.jpg) ;
+				background-size: 100% 100%;
+				transform: rotateY(-90deg) translateZ(100px);
+			}
+			.you{
+				background: url(img/4.jpg);
+				background-size: 100% 100%;
+				transform: rotateY(90deg) translateZ(100px);
+			}
+			.shang{
+				background: url(img/5.jpg);
+				background-size: 100% 100%;
+				transform: rotateX(90deg) translateZ(100px);
+			}
+			.xia{
+				background: url(img/6.jpg);
+				background-size: 100% 100%;
+				transform: rotateX(-90deg) translateZ(100px);
+			}
+			
+			/*旋转放大*/
+			.main:hover .mofang{
+				transform:rotate3d(-1,1,0,360deg) scale3d(2,2,2);
+			}
+			/*.main:hover .mofang{
+				transform:scale3d(2,2,2);
+			}*/
+			/*打开盖子*/
+			/*.main:hover .shang{
+				transform:rotateX(90deg) translateZ(200px);
+			}*/
+		</style>
+	</head>
+	<body>
+		<div class="main">
+			<div class="mofang">
+				<div class="qian"></div>
+				<div class="hou"></div>
+				<div class="zuo"></div>
+				<div class="you"></div>
+				<div class="shang"></div>
+				<div class="xia"></div>
+			</div>
+		</div>
+	</body>
+</html>
